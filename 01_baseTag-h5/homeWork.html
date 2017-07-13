@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01_resume</title>
+	<style>
+		#konwledege{
+			position: fixed;
+			right: 2%;
+			top:2%;
+			text-decoration:underline;
+			color:inherit;
+			outline: none;
+			color: orange;
+			font-size: 12px;
+		}
+		#toTop{
+			position: fixed;
+			right: 2%;
+			bottom: 2%;
+			box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 12px;
+			text-align: center;
+			color: red;
+		}
+		*{margin:0;padding: 0;}
+		body{
+			font-family: 'Microsoft yahei', Verdana, '仿宋',Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			max-width: 1000px;
+			margin: auto;
+			position: relative;
+		}
+		a{text-decoration:none;color:inherit;outline: none;}
+		img{border:none;vertical-align: middle;outline:none;}
+		li{list-style:none;}
+		mark{background: #fe8a02;}
+
+		header{
+			padding: 20px 0 0 0;
+			text-align:center;
+			background-color:#fdefde;
+			border:1px solid #fe8a02 ;
+			border-bottom: none;
+		}
+		header>hgroup>*{
+			margin-bottom: 15px;
+		}
+		header>nav{
+			padding: 8px 0;
+			background-color: #fe8a02;
+		}
+		header>nav>ul{
+			display: flex;
+			flex-flow:row nowrap;
+		}
+		header>nav>ul>li{
+			flex:1;
+			height: 30px;
+			line-height:30px;
+			background-color: #fe8a02;
+			border-right: .5px solid #aaa;
+			color: #eee;
+		}
+		header>nav>ul>li:last-child{
+			border:none;
+		}
+		aside{
+			position: absolute;
+			right: -40px;
+
+		}
+		aside li{
+			padding: 8px;
+			border-bottom: 1px solid #fff;
+			background-color: #419504;
+			font-size:12px;
+			color: #fff;
+			text-align: center;
+			line-height: 20px;
+		}
+		section{
+			display: flex;
+			padding: 30px 20px;
+			border:1px solid #fe8a02 ;
+			border-bottom:none;
+		}
+		section.info>figure{
+			position: relative;
+			width: 139px;
+		    height: 200px;
+		}
+		section.info>figure>img{	
+			height: 100%;
+			width: 100%;
+			box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+		}
+		section.info>figure>figcaption{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background-color: rgba(0,0,0,.5);
+			color: #fff;
+			font-size:12px;
+		}
+		section.info>.baseInfo{
+			padding-left: 30px;
+		}
+		section.info>.baseInfo li{
+			margin-bottom:15px;
+			font-size: 14px;
+		}
+		section.info>.baseInfo span{
+			margin-right:8px;
+			color: green;
+		}
+		section.detail{
+			flex-flow: column;
+		}
+		section.detail>figure{
+			display: flex;
+			flex-flow: column wrap;
+		}
+		section.detail>figure>*{
+			margin-bottom: 15px;
+		}
+		section.detail>figure span{
+			margin-left: 8px;
+		}
+		#health{
+			padding: 5px;
+			color:#fff;
+			font-size:12px;
+			background-color: #f00;
+			cursor:pointer;
+		}
+		section.detail>article{
+			padding: 10px;
+		}
+		section.detail>article>hgroup{
+			text-align: center;
+		}
+		section.detail>article>hgroup>*{
+			margin-bottom: 8px;
+		}
+		section.detail>article>p{
+			text-indent:2em;
+			line-height: 2.6em;
+			font-size:14px;
+		}
+		section.detail>article>p>ruby{
+			color: #00f;
+		}
+		footer{
+			padding: 20px 15px;
+			border:1px solid #fe8a02 ;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="konwledege"><a href="baseKnowledege.html">基本知识</a></div>
+	<a href="#" id='toTop'>Top</a>
+	<header>
+		<hgroup>
+			<h2><mark>阿娇</mark>的个人简历</h2>
+			<h3>———天骄</h3>
+		</hgroup>
+		<nav>
+			<ul>
+				<li><a href="javascript:viod(0)">温柔</a></li>
+				<li><a href="javascript:viod(0)">可爱</a></li>
+				<li><a href="javascript:viod(0)">聪明</a></li>
+				<li><a href="javascript:viod(0)">贤惠</a></li>
+				<li><a href="javascript:viod(0)">文静</a></li>
+				<li><a href="javascript:viod(0)">美丽</a></li>
+			</ul>
+		</nav>
+	</header>
+	<aside>
+		<ul>
+			<li><a href="javascript:void(0)">优秀</a></li>
+			<li><a href="javascript:void(0)">优秀</a></li>
+			<li><a href="javascript:void(0)">优秀</a></li>
+			<li><a href="javascript:void(0)">优秀</a></li>
+			<li><a href="javascript:void(0)">优秀</a></li>
+		</ul>
+	</aside>
+	<section class='info'>
+		<figure class="phto">
+			<img src="http://p3.so.qhimgs1.com/bdr/200_200_/t01e025ad8ea7eed9f3.jpg" alt="靓照">
+			<figcaption>美女~</figcaption>
+		</figure>
+		<div class="baseInfo">
+			<ul>
+				<li>
+					<p><span>姓名:</span>阿娇</p>
+				</li>
+				<li>
+					<p><span>性别:</span>女</p>
+				</li>
+				<li>
+					<p><span>出生日期:</span>1922年2月31日</p>
+				</li>
+				<li>
+					<p><span>家庭住址:</span>江苏无锡沛县</p>
+				</li>
+				<li>
+					<p><span>个人简介:</span>见到我你就知道了,原来世界是这样的</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class='detail'>
+		<figure>
+			<figcaption>个人技能</figcaption>
+			<div><meter value='.8'></meter><span>div+css熟练度</span></div>
+			<div><meter value='.78' high='0.7'></meter><span>js+jquery熟练度</span></div>
+			<div><meter value="0.8" high='0.7'></meter><span>node.js数量度</span></div>
+			<div><progress value=".1"></progress><span><mark id='health'>满血复活</mark></span></div>
+		</figure>
+		<article>
+			<hgroup>
+				<h2>博学多才的她</h2>
+				<h3>——beauty</h3>
+			</hgroup>
+			<p>
+				她，是我从一年级一直到六年级的好朋友，她，是班里突出的一员。她，一双单凤眼，爱扎一个辫，一张樱桃小嘴，能言善辩。
+			</p>
+			<p>
+				是她，在我有困难时帮助我。她好得让我想敬佩她，拜她为师了。
+			</p>
+			<p>
+				她最令我敬佩的地方是她的博学多才。一次体育课，我们为“猫和老鼠”中谁当“猫”而争执不定，最后我们决定来一个“课外知识大比拼”，一个提问题，如果没人答出来就是老鼠，最后剩一个人是猫。第一轮时，她就使出了看家本领：“河<ruby>姆渡<rp>(</rp><rt>"mu<wbr>du"</rt><rp>)</rp></ruby>居住地在哪？”嘿！
+			</p>
+			<p>
+				这下大家似乎不会了。可是我也是一头拦路虎，我迅速说“长江！”可让她气得火冒三丈。第二轮呀，她出的问题是：“为什么我们叫龙的传人？”我暗暗一笑：“这是因为秦始皇让我们做龙的传人，他自己要做龙之祖，也称‘祖龙’。”把这家伙气得脸发白。第三轮，她大声说“我要使绝招了！神七飞天还带了一个‘小跟班’，”“‘小跟班’是什么？”这下我们都哑口无言了，“哈哈哈！不会了吧！这‘小跟班’是指一个小型摄像卫星，自神七发射后一直跟着神七，进行各方面摄影！”说完，她就到旁边来说：“小萌说河姆渡居住地是长江，其实是长江中下游沿岸；为什么是龙的传人是有句诗叫”关河空锁祖龙居“。现在有哪一个人不服气，我就来给她一盘问题大混汤！”说完就坐在我旁边津津有味地观战了。瞧！怎么样？我的好朋友------真是够博学多才吧？
+			</p>
+			<p>
+				她就是我博学多才的好朋友，她姓贾，在课堂上积极踊跃，博学多才，见多识广，你现在来猜一猜，她会是谁?经过我上面的介绍你知道她是谁了吗？我相信你会知道的！
+			</p>
+		</article>
+	</section>
+	<footer>
+		<div>联系方式:**********************</div>
+	</footer>
+	<script>
+		(function(){
+
+		})();
+	</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding: 0;}
+		a{color:inherit;text-decoration:none;outline:none;}
+		a:hover{color:orange;text-decoration: underline;}
+		body{
+			font-family: '仿宋',Arial,'Microsoft yahei', Verdana,  Helvetica, sans-serif;
+			font-size: 18px;
+			padding-bottom: 200px;
+		}
+		.clearfix:after{
+			visibility:hidden;
+			content: '.';
+			display: block;
+			clear: both;
+		}
+		.clearfix{
+			*zoom:1;
+		}
+
+		header{
+			padding: 20px 0;
+			text-align: center;
+
+		}
+		#construction{
+			border:1px solid #ccc;
+			background: rgba(211, 0, 252, 0.86);
+			color:#eee;
+			line-height: 1.6em;
+		}
+		#construction h4{
+			margin-top:10px;
+			color: #abcedf;
+		}
+		#construction p{
+			padding-left: 1em;
+		}
+		#aside-nav{
+			position: fixed;
+			right: 5%;
+			top: 10%;
+			display: none;
+			flex-flow:column;
+			color:rgba(255,255,255,1);
+		}
+		
+		#top{
+			display: none;
+			position: fixed;
+			right: 5%;
+			bottom: 5%;
+			text-align: center;
+			width:35px;
+			height: 35px;
+			border-radius: 100%;
+			line-height: 35px;
+			box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+			cursor: pointer;
+			color: #000;
+			font-weight: bold;
+		}
+	</style>
+	<style>
+		li{list-style: none;}
+		.example{
+			position: relative;
+			margin:0 auto;
+			max-width: 1000px;			
+		}
+		.example header{
+			background-color: #abcdef;
+		}
+		.example figure{
+			width: 50%;
+		}
+		.example aside{
+			position: absolute;
+			right: 5%;
+			top:200px;
+			border:1px dashed red;
+
+		}
+		#list{
+			display: flex;
+
+		}
+		#list li{
+			flex:1;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header class="true">
+		<h1>H5新增标签</h1>
+		<a href="homeWork.html">作业</a>
+	</header>
+	<section class='knowledege'>
+		<aside id='aside-nav'>
+			<nav>
+			</nav>
+		</aside>
+		<div id=top>Top</div>
+		<article id='construction'>
+			<h4>文档声明简化</h4>
+			<p>
+				1.DOCTYPE <br>
+				HTML4.01需要DTD，例如：<br>
+				<<span></span>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><br>
+
+				HTML5不需要DTD，只需要写：<<span></span>!DOCTYPE html> 	<br>
+				2.meta标签规定编码<br>
+				   以前：<br>
+					<<span></span>meta http-equiv=Content-Type content="text/html;charset=utf-8"><br>
+				   现在：<br>
+					<<span></span>meta charset="UTF-8" /><br>
+				meta标签还有很多很棒的关于移动端的更新，后面再详细讨论。<br>
+
+			</p>
+			<h4>1.结构标签</h4>
+			<p>
+				a)header 定义文档的头部区域，一般用在顶部<br>
+				b)article 定义页面独立的文章内容，帖子、博客文章、评论、新闻等可以使用<br>
+				c)nav 定义导航，替代ul和li定义的导航<br>
+				d)section 定义一块区域，一般用来写主体内容部分<br>
+				e)aside 定义侧边栏，侧边信息可以使用<br>
+				f)figure 定义一块独立的内容，通常用来展示图片及其描述<br>
+				g)figcaption 定义figure的标题<br>
+				h)iframe 框架，frameset已经被淘汰<br>
+				i)footer 定义文档的底部，一般以它结尾<br>
+			</p>
+			 <h4>2.特殊样式标签</h4>
+			 <p>
+		 	    a)mark 突出显示文字<br>
+		 	    b)meter 刻度百分比<br>
+		 	    c)progress 进度条<br>
+		 	    d)ruby 内容+注释 rt注释内容 rp不支持时显示<br>
+		 	    e)wbr 长单词换行的位置<br>
+			 </p>
+			 <h4>3.兼容性不是很好的标签（不要求掌握）</h4>
+			 <p>
+			 	a)dialog 定义一个对话框<br>
+			 	b)bdi 单独设置文字摆放方式 open属性<br>
+			 	c)details / summary描述某部分的详情，summary为details的标题<br>
+			 </p>
+			 <h4>4.其他标签</h4>
+			 <p>canvas 、svg 、video audio等更高级的功能标签，后面的课程单独介绍。</p>
+			<h4>5.删除掉的标签</h4>
+			<p>
+				acronym、applet、basefont、bgsound、big、blink、center、dir、font、frame、frameset、hgroup、isindex、listing、marquee、multicol、nextid、nobr、noembed、noframes、plaintext、spacer、strike、tt、xmp
+			</p>
+			<h4>6.思考</h4>
+			<p>
+			  a)1：为什么要新增这些标签<br>
+			       结构标签让语义化的特点更突出，特殊样式标签让内容展示更方便，便于搜索引擎<br>
+			  b)2：低版本不兼容怎么办<br>
+				在低版本浏览器会出现不兼容情况，一般使用JavaScript来兼容。<br>
+				当浏览器不认识HTML5新标签时，会将其解析为一个自定义标签，这样的标签是没办法加样式的（可以使<br>用IE8进行测试），要解决这些新标签样式问题，也就是要解决自定义标签样式问题，代码如下：<br>
+				<br>
+				当然，在IE9+以及主流浏览器，<br>
+				H5标签和自定义标签是可以直接加样式，无需载入JS，<br>
+				所以可以给这段JS添加IE hack，使其在大于等于IE9不执行。<br>
+			</p>
+			 <h4>HTML5兼容性</h4>
+			 <p>
+		 	   1.HTML5有部分内容兼容到IE9，IE8及以下对H5完全不兼容后面的内容不再考虑此类浏览器。<br>
+		 	   <br>
+		 	   2.部分内容需要加兼容前缀，<br>
+		 		-webkit-常用于兼容chrome浏览器，<br>
+		 		-moz-常用于兼容火狐，<br>
+		 		-o-常用于兼容opera，<br>
+		 		-ms-常用于兼容IE。<br>
+		 	   <br>
+		 	   3.兼容性查询网站：http://caniuse.com/<br>
+		 	   4.建议:header/section/footer > aside/article/figure/hgroup/nav > div/figcaption <br>		
+			 </p>		     
+		</article>
+	</section>
+	<section class='example'>
+		<header>
+			<h2>学习H5新标签example</h2>
+		</header>
+		<article>
+			<nav>
+				<ul id='list' >
+					<li>爱时尚nav</li>
+                    <li>要漂亮article</li>
+                    <li>大明星header</li>
+                    <li>乐生活</li>
+                    <li>计算机学院</li>
+                    <li>video</li>
+                    <li>音乐导航</li>
+				</ul>
+			</nav>
+		</article>
+		<figure>
+			<figcaption><mark>figure/figcaption/video/audio/embed</mark></figcaption>
+			<audio id="Audio"></audio>
+			<video controls width="100%" height="100%" src="http://cloud.video.taobao.com/play/u/179205258/p/1/e/6/t/1/35570547.mp4"></video>
+		</figure>
+		<aside>
+            <a href="javascript:void(0)"><mark>aside</mark></a>
+            <a href="javascript:void(0)">服饰美妆</a>
+            <a href="javascript:void(0)">家电手机</a>
+            <a href="javascript:void(0)">爱吃</a>
+            <a href="javascript:void(0)">游戏金融</a>
+        </aside>
+		<div>
+            <mark>一定mark</mark>要做！
+        </div>
+        <meter value="10" min="0" max="10" high="9" optimum="9"></meter>htm+css <mark>meter</mark><br>
+        <meter value="8" min="0" max="10" high="9" optimum="9"></meter>js<br>
+        <meter value="4" min="3" max="10" high="9" optimum="9"></meter>h5<br>
+		<progress id="pro"  max="100"></progress>满血复活<mark>progress</mark> <br>
+	    <ruby>
+	        龍 <rp>(</rp><rt>long</rt><rp>)</rp> ruby/rt/rp兼容
+	    </ruby>
+	    <details>
+	    	<mark>details</mark>
+            <summary>小米Note 2 <mark>summary</mark></summary>
+            <p>商品详细</p>
+            <dl>
+                <dt>大内存</dt>
+                <dd>6GB</dd>
+                <dt>芯片</dt>
+                <dd>骁龙 821</dd>
+                <dt>超高像素相机</dt>
+                <dd> 2256万</dd>
+                <dt>超长续航</dt>
+                <dd>4070mAh</dd>
+            </dl>
+        </details>
+		<div style="width:300px"> 
+			傳說中一種極具靈性的動物。頭生角、鬚，身長，有鱗、爪。Chinese<wbr>Dragon
+			<mark>wbr设置可能换行的位置</mark>
+		</div>
+		<div style="position:absolute;right: 50%;width:200px" >
+	    	<dialog open >
+	    		<dt>消息对话框</dt>
+	    		<dd><mark>dialog</mark></dd>
+	    	</dialog>
+	    </div>
+        <!--将战队名的成绩从周围的文本中 隔离出来 -->
+        <ul>
+            <li>EDG: <bdi>8强赛</bdi>  90分</li>
+            <li>RNG: <bdi>16强赛</bdi> 60分</li>
+            <li>SKT: <bdi>总决赛</bdi> 100分</li>
+        </ul>
+	</section>
+	<footer class='true'>
+		
+	</footer>
+	<script class='base'>
+		(function(){
+			var asideNav = document.getElementById('aside-nav'),//导航
+				oCons = document.getElementById('construction'),//内容
+				oh4 = oCons.querySelectorAll('h4');
+				frag = document.createDocumentFragment(),//Dom碎片
+				createObj = null,
+				min = oCons.offsetTop,
+				max = min + oCons.scrollHeight,
+				aTop = document.getElementById('top');
+				
+			for (var i = 0; i < oh4.length; i++) {
+				createObj = document.createElement('a');
+				createObj.innerText = oh4[i].innerText;
+				oh4[i].id='title'+i;
+				createObj.href = '#' + oh4[i].id;
+				frag.appendChild(createObj);
+			}
+			asideNav.appendChild(frag);
+			//addEventListener
+			document.addEventListener('scroll',function(){
+				var top = document.body.scrollTop;
+				var bHeight = document.body.scrollHeight;
+				if(top>min+200 && top<max){
+					asideNav.style.display = 'flex';
+				}else{
+					asideNav.style.display = 'none';
+				}
+				if(top>bHeight/5){
+					aTop.style.display = 'block';
+				}else{
+					aTop.style.display = 'none';
+				}
+			},false);
+			aTop.onclick = function(e){
+				e = e || window.event;
+				e.preventDefault();
+				m();
+				function m(){
+					var top = document.body.scrollTop;
+					top -= 100;
+					document.body.scrollTop = top;
+					if(top>0){
+						requestAnimationFrame(m);
+					}
+				}
+			};
+		})();
+	</script>
+	<script class='example'>
+		(function(){
+			var olist = document.getElementById('list'),
+				oli = olist.querySelectorAll('li'),
+				oAudio = document.getElementById('Audio');
+			for (var i = 0; i < oli.length; i++) {
+				oli[i].style.backgroundColor = randColor();
+				oli[i].index = i;
+				oli[i].onmouseenter =function(){
+					oAudio.src='mp3/'+(this.index+1)+'.mp3';
+					oAudio.play();
+					
+				};
+			}
+			function randColor(){
+				return '#'+Math.floor(Math.random()*16777215).toString(16);
+			}
+		})();
+	</script>
+</body>
+</html>
